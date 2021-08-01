@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mansalva&display=swap");
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #D1CDC1;
+}
+
+body::before {
+  content: "";
+  background-image: url(../img/bg1.png);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 50vmax;
+  opacity: 0.8;
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  left: 0;
+  bottom: 0;
+}
+
+@media screen and (max-width: 992px) {
+  body::before {
+    opacity: 0.35;
+  }
+}
+
+.custom-nav {
+  margin-top: -1.5rem;
+}
+
+.custom-nav .navbar-brand img {
+  width: 100px;
+  height: 100px;
+}
+
+.custom-nav .navbar-brand span {
+  color: #8C5D43;
+  font-family: 'Mansalva', cursive;
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-left: -1rem;
+}
+
+.custom-nav #navbarNav
+.navbar-nav .nav-item .nav-link {
+  color: #93806F;
+  font-weight: 400;
+  font-size: 15px;
+  margin-left: 4em;
+  -webkit-transition: 0.5s color ease;
+  transition: 0.5s color ease;
+}
+
+.custom-nav #navbarNav
+.navbar-nav .nav-item .nav-link:hover {
+  color: #1f1b17;
+}
+
+.custom-nav #navbarNav
+.navbar-nav .nav-item .sign-up-button {
+  display: inline-block;
+  color: white;
+  background-color: #93806F;
+  border-radius: 2em;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 992px) {
+  .custom-nav {
+    margin-top: 0em;
+  }
+}
+
+.custom-section {
+  margin-top: 6em;
+}
+
+.custom-section h2 {
+  font-weight: 600;
+  font-size: 7rem;
+  color: #93806F;
+  white-space: nowrap;
+}
+
+.custom-section h3 {
+  font-weight: 500;
+  font-size: 2.3rem;
+  color: #8C5D43;
+  white-space: nowrap;
+  line-height: 1.25;
+}
+
+.custom-section p {
+  color: #8C5D43;
+  font-size: 1rem;
+  margin-top: 1em;
+}
+
+.custom-section a {
+  display: inline-block;
+  color: white;
+  background-color: #93806F;
+  border-radius: 2em;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  margin-top: 1em;
+  border: 1px solid transparent;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  font-size: 16px;
+}
+
+.custom-section a:hover {
+  color: #93806F;
+  border: 1px solid #93806F;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 992px) {
+  .custom-section {
+    margin-top: 3.5em;
+    text-align: center;
+  }
+  .custom-section h2, .custom-section h3, .custom-section p {
+    text-shadow: 1px 1px 2px rgba(140, 93, 67, 0.4);
+  }
+}
+/*# sourceMappingURL=main.css.map */

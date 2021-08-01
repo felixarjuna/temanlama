@@ -1,0 +1,111 @@
+@import "fonts";
+@import "variables";
+@import "mixin";
+
+
+// Styles
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: $backgroundColor;
+
+    &::before {
+        content: "";
+        background-image: url(../img/bg1.png);
+        background-position:  top right;
+        background-repeat: no-repeat;
+        background-size: 50vmax;
+        opacity: 0.8;
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        left: 0;
+        bottom: 0;
+        @media screen and (max-width: 992px){
+            opacity: 0.35;
+        }
+    }   
+}
+
+// navigation / NAVBAR
+.custom-nav{
+    margin-top: -1.5rem;
+    .navbar-brand {
+        img {
+            width: 100px;
+            height: 100px;
+        }
+        span {
+            color: $textColor;
+            font-family: 'Mansalva', cursive;;
+            font-weight: bold;
+            font-size: 1.8rem;
+            margin-left: -1rem;
+        }
+    }
+
+    #navbarNav
+        .navbar-nav{
+            .nav-item{
+                .nav-link{
+                    color: $secondaryColor;
+                    font-weight: 400;
+                    font-size: 15px;
+                    margin-left: 4em;
+                    transition: 0.5s color ease;
+
+                    &:hover{
+                        color: darken($secondaryColor, $amount: 40%);
+                    }
+                }
+                .sign-up-button {
+                    @include tombol();
+                }
+            }
+        }
+    @media screen and (max-width: 992px){
+        margin-top: 0em;
+    }
+}
+
+// Custom Section 
+.custom-section {
+    margin-top: 6em;
+    h2 {
+        font-weight: 600;
+        font-size:  7rem;
+        color: $secondaryColor;
+        white-space: nowrap;
+    }
+    h3 {
+        font-weight: 500;
+        font-size: 2.3rem;
+        color: $textColor;
+        white-space: nowrap;
+        line-height: 1.25;
+    }
+    p {
+        color: $textColor;
+        font-size: 1rem;
+        margin-top: 1em;
+    }
+    a {
+        @include tombol;
+        margin-top: 1em;
+        border: 1px solid transparent;
+        transition: 0.5s ease;
+        font-size: 16px;
+
+        &:hover {
+            color: $secondaryColor;
+            border: 1px solid $secondaryColor;
+            background-color: transparent;
+        }
+    }
+    @media screen and (max-width: 992px) {
+        margin-top: 3.5em;
+        text-align: center;
+        h2,h3,p {
+            text-shadow: 1px 1px 2px rgba($textColor, $alpha: 0.4);
+        }
+    }
+}
